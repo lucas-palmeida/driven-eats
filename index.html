@@ -20,30 +20,30 @@
             <div class="titulo-categoria">
                 <h2>Primeiro, seu prato</h2>
             </div>
-            <div class="opcoes-categoria">
-                <div class="opcao">
+            <div class="opcoes-categoria" id="pratos">
+                <div class="opcao" onclick="selecionaPrato(this)">
                     <picture>
                         <img src="images/frango.png" />
                     </picture>
-                    <h3 class="nome-opcao">Frango Yin Yang</h3>
+                    <h3 class="nome-opcao">Frango Xadrez</h3>
                     <p class="descricao-opcao">Um pouco de batata, um pouco de salada</p>
-                    <p class="preco-opcao">R$ 14,90</p>
+                    <p class="preco-opcao">R$ <span>14,90</span></p>
                 </div>
-                <div class="opcao">
+                <div class="opcao" onclick="selecionaPrato(this)">
                     <picture>
                         <img src="images/frango.png" />
                     </picture>
-                    <h3 class="nome-opcao">Frango Yin Yang</h3>
+                    <h3 class="nome-opcao">Frango Frito</h3>
                     <p class="descricao-opcao">Um pouco de batata, um pouco de salada</p>
-                    <p class="preco-opcao">R$ 14,90</p>
+                    <p class="preco-opcao">R$ <span>19,90</span></p>
                 </div>
-                <div class="opcao">
+                <div class="opcao" onclick="selecionaPrato(this)">
                     <picture>
                         <img src="images/frango.png" />
                     </picture>
-                    <h3 class="nome-opcao">Frango Yin Yang</h3>
+                    <h3 class="nome-opcao">Frango no Spaghetti</h3>
                     <p class="descricao-opcao">Um pouco de batata, um pouco de salada</p>
-                    <p class="preco-opcao">R$ 14,90</p>
+                    <p class="preco-opcao">R$ <span>24,90</span></p>
                 </div>
             </div>
         </section>
@@ -51,30 +51,30 @@
             <div class="titulo-categoria">
                 <h2>Agora, sua bebida</h2>
             </div>
-            <div class="opcoes-categoria">
-                <div class="opcao">
+            <div class="opcoes-categoria" id="bebidas">
+                <div class="opcao" onclick="selecionaBebida(this)">
                     <picture>
                         <img src="images/coquinha.png" />
                     </picture>
-                    <h3 class="nome-opcao">Coquinha gelada</h3>
+                    <h3 class="nome-opcao">Coquinha Gelada</h3>
                     <p class="descricao-opcao">Lata 350ml</p>
-                    <p class="preco-opcao">R$ 4,90</p>
+                    <p class="preco-opcao">R$ <span>5,90</span></p>
                 </div>
-                <div class="opcao">
+                <div class="opcao" onclick="selecionaBebida(this)">
                     <picture>
                         <img src="images/coquinha.png" />
                     </picture>
-                    <h3 class="nome-opcao">Frango Yin Yang</h3>
+                    <h3 class="nome-opcao">Fanta Laranja</h3>
                     <p class="descricao-opcao">Lata 350ml</p>
-                    <p class="preco-opcao">R$ 4,90</p>
+                    <p class="preco-opcao">R$ <span>4,90</span></p>
                 </div>
-                <div class="opcao">
+                <div class="opcao" onclick="selecionaBebida(this)">
                     <picture>
                         <img src="images/coquinha.png" />
                     </picture>
-                    <h3 class="nome-opcao">Frango Yin Yang</h3>
+                    <h3 class="nome-opcao">Dolly Trincando</h3>
                     <p class="descricao-opcao">Lata 350ml</p>
-                    <p class="preco-opcao">R$ 4,90</p>
+                    <p class="preco-opcao">R$ <span>3,90</span></p>
                 </div>
             </div>
         </section>
@@ -82,38 +82,39 @@
             <div class="titulo-categoria">
                 <h2>Por fim, sua sobremesa</h2>
             </div>
-            <div class="opcoes-categoria">
-                <div class="opcao">
+            <div class="opcoes-categoria" id="sobremesas">
+                <div class="opcao" onclick="selecionaSobremesa(this)">
                     <picture>
                         <img src="images/pudim.png" />
                     </picture>
-                    <h3 class="nome-opcao">Pudim</h3>
+                    <h3 class="nome-opcao">Pudim Gostoso</h3>
                     <p class="descricao-opcao">Apenas pudim</p>
-                    <p class="preco-opcao">R$ 7,90</p>
+                    <p class="preco-opcao">R$ <span>9,90</span></p>
                 </div>
-                <div class="opcao">
+                <div class="opcao" onclick="selecionaSobremesa(this)">
                     <picture>
                         <img src="images/pudim.png" />
                     </picture>
-                    <h3 class="nome-opcao">Pudim</h3>
+                    <h3 class="nome-opcao">Pudim Formoso</h3>
                     <p class="descricao-opcao">Apenas pudim</p>
-                    <p class="preco-opcao">R$ 7,90</p>
+                    <p class="preco-opcao">R$ <span>7,90</span></p>
                 </div>
-                <div class="opcao">
+                <div class="opcao" onclick="selecionaSobremesa(this)">
                     <picture>
                         <img src="images/pudim.png" />
                     </picture>
-                    <h3 class="nome-opcao">Pudim</h3>
+                    <h3 class="nome-opcao">Pudim Cheiroso</h3>
                     <p class="descricao-opcao">Apenas pudim</p>
-                    <p class="preco-opcao">R$ 7,90</p>
+                    <p class="preco-opcao">R$ <span>5,90</span></p>
                 </div>
             </div>
         </section>
     </main>
     <footer>
         <div class="rodape">
-            <button>Selecione os 3 itens<br>para fechar o pedido</button>
+            <button type="button" onclick="fecharPedido()">Selecione os 3 itens<br>para fechar o pedido</button>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
