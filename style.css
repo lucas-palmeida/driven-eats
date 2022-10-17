@@ -119,13 +119,22 @@ main {
 }
 
 .preco-opcao {
-    width: 66px;
+    width: 150px;
     height: 19px;
     font-size: 15px;
     font-weight: 400;
     margin-top: 5px;
     line-height: 19px;
     text-align: left;
+    position: relative;
+}
+
+ion-icon {
+    font-size: 19px;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    color: #32B72F;
 }
 
 .selecionado {
@@ -162,4 +171,104 @@ footer {
     font-weight: 400;
     line-height: 23px;
     letter-spacing: 0.018em;
+}
+
+.modal {
+    width: 414px;
+    height: 1046px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFFE5;
+}
+
+.modal-content {
+    width: 377px;
+    height: 353px;
+    background-color: #50D074;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 1px #00000040;
+    padding: 21px 25px 0px 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content > h2 {
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.confirmacao {
+    width: 327px;
+    height: 147px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nomes-pedido {
+    width: 180px;
+    height: 100%;
+    margin-top: 28px;
+}
+
+.nomes-pedido > p, .valores-pedido > p {
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    margin-bottom: 13px;
+    color: #FFFFFF;
+}
+
+.valores-pedido {
+    width: 100px;
+    height: 100%;
+    margin-top: 28px;
+}
+
+.valores-pedido > p {
+    text-align: right;
+}
+
+.confirmar-pedido {
+    width: 333px;
+    height: 52px;
+    margin-top: auto;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    color: #50D074;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    text-align: center;
+    border: none;
+}
+
+.cancelar-pedido {
+    width: 333px;
+    height: 52px;
+    background-color: #50D074;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.018em;
+    text-align: center;
+    border: none;
+}
+
+.escondido {
+    display: none;
 }

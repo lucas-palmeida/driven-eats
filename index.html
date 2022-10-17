@@ -27,7 +27,7 @@
                     </picture>
                     <h3 class="nome-opcao">Frango Xadrez</h3>
                     <p class="descricao-opcao">Um pouco de batata, um pouco de salada</p>
-                    <p class="preco-opcao">R$ <span>14,90</span></p>
+                    <p class="preco-opcao">R$ <span>14,90</span><ion-icon name="checkmark-circle-sharp" class="escondido"></ion-icon></p>
                 </div>
                 <div class="opcao" onclick="selecionaPrato(this)">
                     <picture>
@@ -35,7 +35,7 @@
                     </picture>
                     <h3 class="nome-opcao">Frango Frito</h3>
                     <p class="descricao-opcao">Um pouco de batata, um pouco de salada</p>
-                    <p class="preco-opcao">R$ <span>19,90</span></p>
+                    <p class="preco-opcao">R$ <span>19,90</span><ion-icon name="checkmark-circle-sharp" class="escondido"></ion-icon></p>
                 </div>
                 <div class="opcao" onclick="selecionaPrato(this)">
                     <picture>
@@ -43,7 +43,7 @@
                     </picture>
                     <h3 class="nome-opcao">Frango no Spaghetti</h3>
                     <p class="descricao-opcao">Um pouco de batata, um pouco de salada</p>
-                    <p class="preco-opcao">R$ <span>24,90</span></p>
+                    <p class="preco-opcao">R$ <span>24,90</span><ion-icon name="checkmark-circle-sharp" class="escondido"></ion-icon></p>
                 </div>
             </div>
         </section>
@@ -58,7 +58,7 @@
                     </picture>
                     <h3 class="nome-opcao">Coquinha Gelada</h3>
                     <p class="descricao-opcao">Lata 350ml</p>
-                    <p class="preco-opcao">R$ <span>5,90</span></p>
+                    <p class="preco-opcao">R$ <span>5,90</span><ion-icon name="checkmark-circle-sharp" class="escondido"></ion-icon></p>
                 </div>
                 <div class="opcao" onclick="selecionaBebida(this)">
                     <picture>
@@ -66,7 +66,7 @@
                     </picture>
                     <h3 class="nome-opcao">Fanta Laranja</h3>
                     <p class="descricao-opcao">Lata 350ml</p>
-                    <p class="preco-opcao">R$ <span>4,90</span></p>
+                    <p class="preco-opcao">R$ <span>4,90</span><ion-icon name="checkmark-circle-sharp" class="escondido"></ion-icon></p>
                 </div>
                 <div class="opcao" onclick="selecionaBebida(this)">
                     <picture>
@@ -74,7 +74,7 @@
                     </picture>
                     <h3 class="nome-opcao">Dolly Trincando</h3>
                     <p class="descricao-opcao">Lata 350ml</p>
-                    <p class="preco-opcao">R$ <span>3,90</span></p>
+                    <p class="preco-opcao">R$ <span>3,90</span><ion-icon name="checkmark-circle-sharp" class="escondido"></ion-icon></p>
                 </div>
             </div>
         </section>
@@ -89,7 +89,7 @@
                     </picture>
                     <h3 class="nome-opcao">Pudim Gostoso</h3>
                     <p class="descricao-opcao">Apenas pudim</p>
-                    <p class="preco-opcao">R$ <span>9,90</span></p>
+                    <p class="preco-opcao">R$ <span>9,90</span><ion-icon name="checkmark-circle-sharp" class="escondido"></ion-icon></p>
                 </div>
                 <div class="opcao" onclick="selecionaSobremesa(this)">
                     <picture>
@@ -97,7 +97,7 @@
                     </picture>
                     <h3 class="nome-opcao">Pudim Formoso</h3>
                     <p class="descricao-opcao">Apenas pudim</p>
-                    <p class="preco-opcao">R$ <span>7,90</span></p>
+                    <p class="preco-opcao">R$ <span>7,90</span><ion-icon name="checkmark-circle-sharp" class="escondido"></ion-icon></p>
                 </div>
                 <div class="opcao" onclick="selecionaSobremesa(this)">
                     <picture>
@@ -105,16 +105,38 @@
                     </picture>
                     <h3 class="nome-opcao">Pudim Cheiroso</h3>
                     <p class="descricao-opcao">Apenas pudim</p>
-                    <p class="preco-opcao">R$ <span>5,90</span></p>
+                    <p class="preco-opcao">R$ <span>5,90</span><ion-icon name="checkmark-circle-sharp" class="escondido"></ion-icon></p>
                 </div>
             </div>
         </section>
     </main>
     <footer>
         <div class="rodape">
-            <button type="button" onclick="fecharPedido()">Selecione os 3 itens<br>para fechar o pedido</button>
+            <button type="button" onclick="mostraModal()">Selecione os 3 itens<br>para fechar o pedido</button>
         </div>
     </footer>
+    <div class="modal escondido">
+        <div class="modal-content">
+            <h2>Confirme seu pedido</h2>
+            <div class="confirmacao">
+                <div class="nomes-pedido">
+                    <p class="nome-prato"></p>
+                    <p class="nome-bebida"></p>
+                    <p class="nome-sobremesa"></p>
+                    <p class="total">TOTAL</p>
+                </div>
+                <div class="valores-pedido">
+                    <p class="valor-prato"></p>
+                    <p class="valor-bebida"></p>
+                    <p class="valor-sobremesa"></p>
+                    <p class="valor-total"></p>
+                </div>
+            </div>
+            <button class="confirmar-pedido" onclick="fecharPedido()">Tudo certo, pode pedir!</button>
+            <button class="cancelar-pedido" onclick="cancelaPedido()">Cancelar</button>
+        </div>
+    </div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
